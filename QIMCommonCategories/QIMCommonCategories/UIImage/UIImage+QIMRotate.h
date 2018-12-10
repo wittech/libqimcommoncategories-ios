@@ -6,10 +6,9 @@
 //  Copyright 2012 Tencent. All rights reserved.
 //
 
-
-
 #define degreesToRadians(x) (M_PI * (x) / 180.0)
 
+#import <UIKit/UIKit.h>
 
 @interface UIImage (QIMRotate)
 

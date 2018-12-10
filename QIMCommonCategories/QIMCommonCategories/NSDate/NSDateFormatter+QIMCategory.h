@@ -10,7 +10,8 @@
   * from EaseMob Technologies.
   */
 
-
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 @interface NSDateFormatter (QIMCategory)
 

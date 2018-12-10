@@ -10,7 +10,8 @@
   * from EaseMob Technologies.
   */
 
-
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 #define D_MINUTE	60
 #define D_HOUR		3600
