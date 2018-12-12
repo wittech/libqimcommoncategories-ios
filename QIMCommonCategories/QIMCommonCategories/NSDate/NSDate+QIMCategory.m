@@ -60,7 +60,12 @@
 	}
 }
 
-
+- (NSString *)qim_MonthDescription {
+    NSDateFormatter *dateFormatter = [NSDateFormatter qim_dateFormatterWithFormat:@"yyyy年-MM月"];
+    
+    NSString *theDay = [dateFormatter stringFromDate:self];//日期的年月
+    return theDay;
+}
 
 /*标准时间日期描述*/
 -(NSString *)qim_formattedTime{

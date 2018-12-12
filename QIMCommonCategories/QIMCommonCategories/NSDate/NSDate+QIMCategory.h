@@ -23,6 +23,7 @@
 
 - (NSString *)qim_timeIntervalDescription;//距离当前的时间间隔描述
 - (NSString *)qim_minuteDescription;/*精确到分钟的日期描述*/
+- (NSString *)qim_MonthDescription; /*精确到月的日期描述*/
 - (NSString *)qim_dayDescription;
 - (NSString *)qim_formattedTime;
 - (NSString *)qim_formattedDateDescription;//格式化日期描述
