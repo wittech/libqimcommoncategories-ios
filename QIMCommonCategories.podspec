@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "QIMCommonCategories"
-  s.version      = "0.0.5"
+  s.version      = "1.0.0"
   s.summary      = "Qunar chat App 6.0+ version QIMCommonCategories"
   s.description  = <<-DESC
                    Qunar QIMCommonCategories解决方案
@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.license      = "Copyright 2018 im.qunar.com"
   s.author        = { "Qunar IM" => "qtalk@qunar.com" }
 
-  s.source       = { :git => "", :tag => s.version.to_s}
+  s.source       = { :git => "https://github.com/qunarcorp/libqimcommoncategories-ios.git", :tag => s.version.to_s}
 
   s.ios.deployment_target   = '9.0'
 
