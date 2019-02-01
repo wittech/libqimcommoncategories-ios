@@ -382,6 +382,51 @@
 
 #pragma mark Adjusting Dates
 
+//将时间点转化成日历形式
++ (NSDate *)getCustomDateWithHour:(NSInteger)hour {
+    
+    //获取当前时间
+    NSDate * destinationDateNow = [NSDate date];
+
+    NSCalendar *currentCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+
+    NSDateComponents *currentComps = [[NSDateComponents alloc] init];
+
+    NSInteger unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
+
+    currentComps = [currentCalendar components:unitFlags fromDate:destinationDateNow];
+
+    //设置当前的时间点
+    NSDateComponents *resultComps = [[NSDateComponents alloc] init];
+    [resultComps setYear:[currentComps year]];
+    [resultComps setMonth:[currentComps month]];
+    [resultComps setDay:[currentComps day]];
+    [resultComps setHour:hour];
+
+    NSCalendar *resultCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    return [resultCalendar dateFromComponents:resultComps];
+}
+
+//获取时间段
++ (QIMDateDayType)qim_getTheTimeBucket {
+
+    NSDate * currentDate = [NSDate date];
+    if ([currentDate compare:[NSDate getCustomDateWithHour:0]] == NSOrderedDescending && [currentDate compare:[NSDate getCustomDateWithHour:9]] == NSOrderedAscending) {
+        return QIMDateDayTypeMorning;
+    } else if ([currentDate compare:[NSDate getCustomDateWithHour:9]] == NSOrderedDescending && [currentDate compare:[NSDate getCustomDateWithHour:11]] == NSOrderedAscending) {
+    
+        return QIMDateDayTypeMorning;
+    } else if ([currentDate compare:[NSDate getCustomDateWithHour:11]] == NSOrderedDescending && [currentDate compare:[NSDate getCustomDateWithHour:13]] == NSOrderedAscending) {
+        
+        return QIMDateDayTypeAfternoon;
+   } else if ([currentDate compare:[NSDate getCustomDateWithHour:13]] == NSOrderedDescending && [currentDate compare:[NSDate getCustomDateWithHour:18]] == NSOrderedAscending) {
+    
+        return QIMDateDayTypeAfternoon;
+    } else {
+        return QIMDateDayTypeNight;
+    }
+}
+
 - (NSDate *) qim_dateByAddingDays: (NSInteger) dDays
 {
 	NSTimeInterval aTimeInterval = [self timeIntervalSinceReferenceDate] + D_DAY * dDays;

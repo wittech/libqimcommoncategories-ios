@@ -25,17 +25,14 @@
 }
 
 - (CGFloat)qim_rightWidth{
-    return self.bounds.size.width - [self qim_leftWidth] - [self qim_dockWidth];
-    return MAX(self.bounds.size.width, self.bounds.size.height) - [self qim_leftWidth] - [self qim_dockWidth];
+    return [UIApplication sharedApplication].keyWindow.bounds.size.width - [self qim_leftWidth] - [self qim_dockWidth];
 }
 
 - (CGFloat)height{
     return self.bounds.size.height;
-    return MIN(self.bounds.size.width, self.bounds.size.height);
 }
 
 - (CGFloat)width{
     return self.bounds.size.width;
-    return MAX(self.bounds.size.width, self.bounds.size.height);
 }
 @end

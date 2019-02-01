@@ -19,6 +19,13 @@
 #define D_WEEK		604800
 #define D_YEAR		31556926
 
+typedef enum : NSUInteger {
+    QIMDateDayTypeMorning,
+    QIMDateDayTypeNoon,
+    QIMDateDayTypeAfternoon,
+    QIMDateDayTypeNight,
+} QIMDateDayType;
+
 @interface NSDate (QIMCategory)
 
 - (NSString *)qim_timeIntervalDescription;//距离当前的时间间隔描述
@@ -63,6 +70,9 @@
 // Date roles
 - (BOOL) qim_isTypicallyWorkday;
 - (BOOL) qim_isTypicallyWeekend;
+
+//获取时间段
++ (QIMDateDayType)qim_getTheTimeBucket;
 
 // Adjusting dates
 - (NSDate *) qim_dateByAddingDays: (NSInteger) dDays;
