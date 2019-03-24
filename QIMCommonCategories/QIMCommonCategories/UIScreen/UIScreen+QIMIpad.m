@@ -25,7 +25,8 @@
 }
 
 - (CGFloat)qim_rightWidth{
-    return [UIApplication sharedApplication].keyWindow.bounds.size.width - [self qim_leftWidth] - [self qim_dockWidth];
+    UIView *view = [[[UIApplication sharedApplication].keyWindow.rootViewController.childViewControllers lastObject] view];
+    return CGRectGetWidth(view.frame);
 }
 
 - (CGFloat)height{
