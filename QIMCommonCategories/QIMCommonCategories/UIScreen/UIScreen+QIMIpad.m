@@ -18,8 +18,8 @@
 }
 
 - (CGFloat)qim_leftWidth{
-    if ([UIScreen mainScreen].width * 0.21 < 300) {
-        return 300;
+    if ([UIScreen mainScreen].width * 0.21 < 320) {
+        return 320;
     }
     return [UIScreen mainScreen].width * 0.21;
 }
