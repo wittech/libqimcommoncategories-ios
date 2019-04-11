@@ -18,15 +18,29 @@
 }
 
 - (CGFloat)qim_leftWidth{
-    if ([UIScreen mainScreen].width * 0.21 < 320) {
-        return 320;
+    NSString *deviceType = [UIDevice currentDevice].model;
+    
+    if([deviceType isEqualToString:@"iPad"]) {
+        //iPad
+        if ([UIScreen mainScreen].width * 0.21 < 295) {
+            return 295;
+        }
+        return [UIScreen mainScreen].width * 0.21;
+    } else {
+        return [UIScreen mainScreen].bounds.size.width;
     }
-    return [UIScreen mainScreen].width * 0.21;
 }
 
 - (CGFloat)qim_rightWidth{
-    UIView *view = [[[UIApplication sharedApplication].keyWindow.rootViewController.childViewControllers lastObject] view];
-    return CGRectGetWidth(view.frame);
+    NSString *deviceType = [UIDevice currentDevice].model;
+    
+    if([deviceType isEqualToString:@"iPad"]) {
+        //iPad
+        UIView *view = [[[UIApplication sharedApplication].keyWindow.rootViewController.childViewControllers lastObject] view];
+        return CGRectGetWidth(view.frame);
+    } else {
+        return [UIScreen mainScreen].bounds.size.width;
+    }
 }
 
 - (CGFloat)height{
