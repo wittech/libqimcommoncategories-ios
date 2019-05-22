@@ -303,6 +303,16 @@
     return [self length] > 0;
 }
 
+- (BOOL)qim_checkIsChinese {
+    for (int i = 0; i < self.length; i++) {
+        unichar ch = [self characterAtIndex:i];
+        if (0x4E00 <= ch  && ch <= 0x9FA5) {
+            return YES;
+        }
+    }
+    return NO;
+}
+
 #pragma mark Trim Space
 - (NSString *)qim_trimSpaceString
 {

@@ -40,6 +40,8 @@
 
 - (BOOL)qim_isStringSafe;
 
+//检查是否包含中文
+- (BOOL)qim_checkIsChinese;
 // Trim
 - (NSString *)qim_trimSpaceString;
 

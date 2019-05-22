@@ -33,4 +33,10 @@
 
 - (UIImage*)qim_imageByScalingAndCroppingForSize:(CGSize)targetSize;
 
++ (UIImage *)qim_imageWithColor:(UIColor *)color
+                           size:(CGSize)size
+                           text:(NSString *)text
+                 textAttributes:(NSDictionary *)textAttributes
+                       circular:(BOOL)isCircular;
+
 @end
