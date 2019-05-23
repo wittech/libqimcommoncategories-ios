@@ -127,6 +127,7 @@
 - (UIImage *)qim_applyBlurWithRadius:(CGFloat)blurRadius tintColor:(UIColor *)tintColor saturationDeltaFactor:(CGFloat)saturationDeltaFactor maskImage:(UIImage *)maskImage;
 
 + (UIImage *)qim_imageWithColor:(UIColor *)color;
++ (UIImage *)qim_imageWithColor:(UIColor *)color size:(CGSize)size;
 + (UIImage *)qim_convertViewToImage;
 + (UIImage *)qim_convertViewToImage:(UIView *)view;
 

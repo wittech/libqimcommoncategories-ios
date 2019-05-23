@@ -11,6 +11,7 @@
 @interface UIImage (QIMUtility)
 - (UIImage *)qim_sdImage;
 + (UIImage *)qim_imageFromColor:(UIColor *)color;
++ (UIImage *)qim_imageWithColor:(UIColor *)color size:(CGSize)size;
 -(UIImage *)qim_getSubImage:(CGRect)rect;
 -(UIImage *)qim_scaleToSize:(CGSize)size;
 + (UIImage *)qim_TransformtoSize:(CGSize)size image:(UIImage *)image;
