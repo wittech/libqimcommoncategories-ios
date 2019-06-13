@@ -23,5 +23,8 @@ Pod::Spec.new do |s|
   s.public_header_files = "QIMCommonCategories/**/*.{h}"
   s.source_files = "QIMCommonCategories/**/*.{h,m,c}"
   s.xcconfig = {'BITCODE_GENERATION_MODE' => 'bitcode'}
+  s.pod_target_xcconfig = {
+    "APPLICATION_EXTENSION_API_ONLY" => "YES",
+  }
   s.frameworks = 'UIKit', 'Foundation', 'CoreFoundation', 'ImageIO'
 end
