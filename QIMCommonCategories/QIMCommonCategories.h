@@ -33,7 +33,6 @@ FOUNDATION_EXPORT const unsigned char QIMCommonCategoriesVersionString[];
 #import <QIMCommonCategories/UIImage+QIMUtility.h>
 #import <QIMCommonCategories/UIImage+QIMRotate.h>
 #import <QIMCommonCategories/UIImage+QIMTint.h>
-#import <QIMCommonCategories/UIScreen+QIMIpad.h>
 #import <QIMCommonCategories/UIView+QIMExtension.h>
 #import <QIMCommonCategories/UIView+TTCategory.h>
 
@@ -56,7 +55,6 @@ FOUNDATION_EXPORT const unsigned char QIMCommonCategoriesVersionString[];
 #import "UIImage+QIMUtility.h"
 #import "UIImage+QIMRotate.h"
 #import "UIImage+QIMTint.h"
-#import "UIScreen+QIMIpad.h"
 #import "UIView+QIMExtension.h"
 #import "UIView+TTCategory.h"
 #endif
