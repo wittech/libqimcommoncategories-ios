@@ -20,7 +20,7 @@
 
 + (CGSize)qim_getImageSizeWithURL:(id)imageURL;
 
-+ (UIImage *)qim_screenShotInWindow;
++ (UIImage *)qim_screenShotInWindow NS_EXTENSION_UNAVAILABLE_IOS("");
 
 + (NSString *)qim_contentTypeForImageData:(NSData *)data;
 
