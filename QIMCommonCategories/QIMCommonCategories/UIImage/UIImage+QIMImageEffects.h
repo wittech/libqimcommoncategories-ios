@@ -128,7 +128,7 @@
 
 + (UIImage *)qim_imageWithColor:(UIColor *)color;
 + (UIImage *)qim_imageWithColor:(UIColor *)color size:(CGSize)size;
-+ (UIImage *)qim_convertViewToImage;
++ (UIImage *)qim_convertViewToImage NS_EXTENSION_UNAVAILABLE_IOS("QIM_EXTENSION");
 + (UIImage *)qim_convertViewToImage:(UIView *)view;
 
 @end
