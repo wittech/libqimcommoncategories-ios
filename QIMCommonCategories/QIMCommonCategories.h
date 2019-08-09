@@ -17,6 +17,7 @@ FOUNDATION_EXPORT const unsigned char QIMCommonCategoriesVersionString[];
 
 #import <QIMCommonCategories/NSBundle+QIMLibrary.h>
 #import <QIMCommonCategories/NSData+QIMBase64.h>
+#import <QIMCommonCategories/NSData+QIMMD5.h>
 #import <QIMCommonCategories/NSData+QIMCommonCrypto.h>
 #import <QIMCommonCategories/NSData+QIMHookContentsOfFile.h>
 #import <QIMCommonCategories/NSDate+QIMCategory.h>
@@ -39,6 +40,7 @@ FOUNDATION_EXPORT const unsigned char QIMCommonCategoriesVersionString[];
 #else
 #import "NSBundle+QIMLibrary.h"
 #import "NSData+QIMBase64.h"
+#import "NSData+QIMMD5.h"
 #import "NSData+QIMCommonCrypto.h"
 #import "NSData+QIMHookContentsOfFile.h"
 #import "NSDate+QIMCategory.h"
