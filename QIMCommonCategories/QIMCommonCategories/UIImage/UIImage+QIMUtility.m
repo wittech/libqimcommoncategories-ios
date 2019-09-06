@@ -348,7 +348,7 @@
     return img;
 }
 
-+ (UIImage *)QIMSDK_imageNamed:(NSString *)name {
++ (UIImage *)qim_imageNamed:(NSString *)name {
     if ([name hasSuffix:@".png"]) {
         name = [name substringToIndex:name.length - @".png".length];
     }

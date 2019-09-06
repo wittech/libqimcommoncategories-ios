@@ -12,8 +12,8 @@
 - (UIImage *)qim_sdImage;
 + (UIImage *)qim_imageFromColor:(UIColor *)color;
 + (UIImage *)qim_imageWithColor:(UIColor *)color size:(CGSize)size;
--(UIImage *)qim_getSubImage:(CGRect)rect;
--(UIImage *)qim_scaleToSize:(CGSize)size;
+- (UIImage *)qim_getSubImage:(CGRect)rect;
+- (UIImage *)qim_scaleToSize:(CGSize)size;
 + (UIImage *)qim_TransformtoSize:(CGSize)size image:(UIImage *)image;
 
 - (UIImage *)qim_imageWithMaxLength:(CGFloat)sideLenght;
@@ -30,7 +30,7 @@
 
 + (NSString *)qim_image2DataURL: (UIImage *) image;
 
-+ (UIImage *)QIMSDK_imageNamed:(NSString *)name;
++ (UIImage *)qim_imageNamed:(NSString *)name;
 
 - (UIImage*)qim_imageByScalingAndCroppingForSize:(CGSize)targetSize;
 
