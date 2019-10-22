@@ -293,7 +293,7 @@
     [data getBytes:&c length:1];
     switch (c) {
         case 0xFF:
-            return @"jpeg";
+            return @"jpg";
         case 0x89:
             return @"png";
         case 0x47:
