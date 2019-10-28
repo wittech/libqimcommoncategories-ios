@@ -293,7 +293,7 @@
     [data getBytes:&c length:1];
     switch (c) {
         case 0xFF:
-            return @"jpeg";
+            return @"jpg";
         case 0x89:
             return @"png";
         case 0x47:
@@ -348,7 +348,7 @@
     return img;
 }
 
-+ (UIImage *)QIMSDK_imageNamed:(NSString *)name {
++ (UIImage *)qim_imageNamed:(NSString *)name {
     if ([name hasSuffix:@".png"]) {
         name = [name substringToIndex:name.length - @".png".length];
     }
