@@ -41,7 +41,7 @@
 /*精确到分钟的日期描述*/
 - (NSString *)qim_minuteDescription
 {
-    NSDateFormatter *dateFormatter = [NSDateFormatter qim_dateFormatterWithFormat:@"yyyy-MM-dd"];
+    NSDateFormatter *dateFormatter = [NSDateFormatter qim_dateFormatterWithFormat:@"yyyy年MM月dd日"];
     
 	NSString *theDay = [dateFormatter stringFromDate:self];//日期的年月日
 	NSString *currentDay = [dateFormatter stringFromDate:[NSDate date]];//当前年月日
@@ -61,7 +61,7 @@
 }
 
 - (NSString *)qim_MonthDescription {
-    NSDateFormatter *dateFormatter = [NSDateFormatter qim_dateFormatterWithFormat:@"yyyy年-MM月"];
+    NSDateFormatter *dateFormatter = [NSDateFormatter qim_dateFormatterWithFormat:@"yyyy年MM月"];
     
     NSString *theDay = [dateFormatter stringFromDate:self];//日期的年月
     return theDay;
@@ -96,7 +96,7 @@
         }else if (hour < 0 && hour >= -24) {
             dateFormatter = [NSDateFormatter qim_dateFormatterWithFormat:@"昨天HH:mm"];
         }else {
-            dateFormatter = [NSDateFormatter qim_dateFormatterWithFormat:@"yyyy-MM-dd"];
+            dateFormatter = [NSDateFormatter qim_dateFormatterWithFormat:@"yyyy年MM月dd日"];
         }
     }else {
         if (hour >= 0 && hour <= 6) {
@@ -110,7 +110,7 @@
         }else if (hour < 0 && hour >= -24){
             dateFormatter = [NSDateFormatter qim_dateFormatterWithFormat:@"昨天HH:mm"];
         }else  {
-            dateFormatter = [NSDateFormatter qim_dateFormatterWithFormat:@"yyyy-MM-dd"];
+            dateFormatter = [NSDateFormatter qim_dateFormatterWithFormat:@"yyyy年MM月dd日"];
         }
         
     }
@@ -132,7 +132,7 @@
     } else if ([[dateFormatter dateFromString:currentDay] timeIntervalSinceDate:[dateFormatter dateFromString:theDay]] == 86400) {//昨天
         return [NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"common_yesterday", nil),[dateFormatter stringFromDate:self]];
     } else {//以前
-        [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+        [dateFormatter setDateFormat:@"yyyy年MM月dd日"];
         return [dateFormatter stringFromDate:self];
     }
 }
@@ -161,7 +161,7 @@
         [dateFormatter setDateFormat:@"HH:mm"];
         return [NSString stringWithFormat:@"%@ %@",@"昨天",[dateFormatter stringFromDate:self]];
     } else {//以前
-		[dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+		[dateFormatter setDateFormat:@"yyyy年MM月dd日 HH:mm"];
         return [dateFormatter stringFromDate:self];
 	}
 }
